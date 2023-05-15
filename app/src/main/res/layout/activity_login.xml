@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
 
-            app:srcCompat="@drawable/illustration_started" />
+            app:srcCompat="@drawable/intro" />
 
         <LinearLayout
             android:layout_width="match_parent"

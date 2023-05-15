@@ -4,6 +4,9 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.chemistryapp.activities.LoginActivity
+import com.example.chemistryapp.activities.ProfileActivity
+import com.example.chemistryapp.utils.Utility
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -18,9 +21,9 @@ class MainActivity : AppCompatActivity() {
 
 
         Timer().schedule(3000){
-            val isLoggedIn = sharedPref.getBoolean("is_logged_in", false)
+            val isLoggedIn = sharedPref.getString(Utility.userKey, "")
 
-            if(isLoggedIn){
+            if(!isLoggedIn.isNullOrEmpty()){
                 startActivity(Intent(applicationContext, ProfileActivity::class.java))
             } else {
                 startActivity(Intent(applicationContext, LoginActivity::class.java))
